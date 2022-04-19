@@ -1,0 +1,40 @@
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100;
+    line-height: 1;
+    color: #111;
+    background-color: white;
+}
+
+
+.heading-primary {
+    margin-bottom: 80px;
+    display: block;
+    padding: 10px 15px 6px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 45px;
+    font-family: 'Brush Script MT', cursive;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+section {
+    display: block;
+    margin-bottom: 40px;
+}
+
+.heading-secondary {
+    margin-bottom: 10px;
+}
