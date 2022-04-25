@@ -63,9 +63,5 @@ let mainContent = data.results.map(eachSection => {
     main.appendChild(mainSection);
     
     var position = document.getElementsByTagName("body")[0];
-    position.appendChild(main);
-
-    return main;
-
-    
+    position.appendChild(main);    
 })
