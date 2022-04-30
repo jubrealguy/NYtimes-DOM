@@ -44,7 +44,7 @@ for (let i = 0; i < data.results.length; i++) {
 
 //    ...........USING .MAP() METHOD TO ITERATE THROUGH JSON DATA, THEN  CREATING ELEMENTS AND NESTING THEM INTO EACH OTHER............
 
-const main = document.createElement("main");
+const main = document.querySelector("#main");
 
 let mainContent = data.results.map(eachSection => {
     
@@ -53,15 +53,29 @@ let mainContent = data.results.map(eachSection => {
     const mainSectionParagraph = document.createElement("p");
     
     const mainSectionHeadContent = document.createTextNode(eachSection["title"]);
-    const mainSectionParagraphContent =document.createTextNode(eachSection["url"]);
+    const mainSectionParagraphContent = document.createTextNode(eachSection["url"]);
     
     mainSectionHead.appendChild(mainSectionHeadContent);
     mainSectionParagraph.appendChild(mainSectionParagraphContent);
-    
-    mainSection.appendChild(mainSectionHead)
+
+    mainSection.appendChild(mainSectionHead);
     mainSection.appendChild(mainSectionParagraph);
-    main.appendChild(mainSection);
     
-    var position = document.getElementsByTagName("body")[0];
-    position.appendChild(main);    
+    main.appendChild(mainSection);
 })
+
+
+
+
+/*
+const listOfMainSections = data.map(s => {
+    const p = new Paragraph(s.p)
+    const h = new Head(s.h)
+    const m = new Main()
+    m.children(p,h)
+
+    return m;
+})
+
+DOM.writeToDom(listOfMainSections);
+*/
